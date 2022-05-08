@@ -1,0 +1,18 @@
+// NOTE:
+// If you're looking at core's `tsconfig.json` for the "perfect"
+// tsconfig for your erxtension, look at the dedicated tsconfig
+// repo instead.
+//
+// https://github.com/duroom/duroom-tsconfig
+
+{
+  // Use DuRoom's tsconfig as a starting point
+  "extends": "duroom-tsconfig",
+  // This will match all .ts, .tsx, .d.ts, .js, .jsx files
+  "include": ["src/**/*", "@types/**/*"],
+  "compilerOptions": {
+    // This will output typings to `dist-typings`
+    // If you change this, also change the `package.json` clean script
+    "declarationDir": "./dist-typings"
+  }
+}
